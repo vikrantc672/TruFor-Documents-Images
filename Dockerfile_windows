@@ -1,0 +1,23 @@
+# Start from the base image
+FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+
+# Use PowerShell as the shell
+SHELL ["powershell", "-Command"]
+
+# Update the package manager and install necessary utilities
+RUN apt-get update ; \
+    apt-get upgrade -y ; \
+    apt-get install -y apt-utils wget unzip git ; \
+    pip install --upgrade pip ; \
+    pip install tqdm 'yacs>=0.1.8' 'timm>=0.5.4' 'numpy==1.21.5'
+
+# Set the working directory
+WORKDIR /
+
+# Download and extract the TruFor weights
+RUN wget -Uri https://www.grip.unina.it/download/prog/TruFor/TruFor_weights.zip -OutFile TruFor_weights.zip ; \
+    Expand-Archive -Path .\TruFor_weights.zip -DestinationPath . ; \
+    Remove-Item -Force TruFor_weights.zip
+
+# Set the entrypoint command
+ENTRYPOINT [ "python", "trufor_test.py" ]
