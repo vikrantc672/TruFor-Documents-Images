@@ -14,7 +14,6 @@ Step 5: Output is shown in output.txt file\
 
 # For Windows
 Step 1: Put the folder for input images path in docker_run.bat file\
-Step 1.1: cd test_docker\
 Step 2: try command docker_build.bat if doesn't run then install docker desktop windows from https://docs.docker.com/desktop/release-notes/ download 24.0\
 Step 3: After download install the docker the computer will restart\
 Step 4: Then check if docker installed on not using the command docker -v\
