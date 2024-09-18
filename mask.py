@@ -8,9 +8,6 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
-
-
-# Parse command-line arguments
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--image_dir', type=str, help='original image directory')
 parser.add_argument('--mask_npz_dir', type=str, help='mask npz directory')

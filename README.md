@@ -3,7 +3,7 @@ put the folder for input images path in docker_run.sh file
 
 # For Ubuntu/Mac
 Step 1: Put the folder for input images path in docker_run.sh file
-Step 2: sudo bash docker_build.sh\
+Step 3: sudo bash docker_build.sh\
 Step 3: Kindly specify input images path in docker_run.sh file in the variable INPUT_DIR\
 
 CAUTION!! : KINDLY TAKE CARE THAT THERE IS NO SPACE IN YOUR INPUT FILE PATH\

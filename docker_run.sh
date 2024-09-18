@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-INPUT_DIR=/home/vikrant/Desktop/TruFor-main/y
+INPUT_DIR=/home/vikrant/Downloads/TruFor-Documents-Images-master/forged_document
 OUTPUT_DIR=./output
 MASK_RESULT_DIR=./mask
 path=$(realpath ${INPUT_DIR})

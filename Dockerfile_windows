@@ -18,6 +18,6 @@ WORKDIR /
 RUN wget -Uri https://www.grip.unina.it/download/prog/TruFor/TruFor_weights.zip -OutFile TruFor_weights.zip ; \
     Expand-Archive -Path .\TruFor_weights.zip -DestinationPath . ; \
     Remove-Item -Force TruFor_weights.zip
-
+ 
 # Set the entrypoint command
 ENTRYPOINT [ "python", "trufor_test.py" ]
